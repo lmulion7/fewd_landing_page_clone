@@ -5,10 +5,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-/**
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,67 +24,114 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-    display: block;
+	display: block;
 }
 body {
-    line-height: 1;
+	line-height: 1;
 }
 ol, ul {
-    list-style: none;
+	list-style: none;
 }
-/* End of Reset */
-/* Start of Custom Styles */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    /*background-color: LightGray;*/
+    font-family: 'Roboto', sans-serif; 
+}
+
+/*div {
+    border: 1px solid Chocolate;
+}*/
+
 .content {
-    padding: 0 100px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    width: 970px;
 }
 /* Navigation Section */
+.top-navigation {
+    background-color: #fff;
+    position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+.top-navigation > .content {
+    height: 70px;
+}
+
+.top-navigation .logo {
+	height: 70px;
+}
+
 .top-navigation .links {
-    float: right;
-    font-family: 'Roboto', sans-serif;
-    color: #838994;
-    font-size: 16px;
-    margin-top: 25px;
-    -webkit-font-smoothing: antialiased;
+	float:right;
+    font-family: 'Roboto', sans-serif; 
+	font-size: 16px; 
+	color: #838994; 
+	letter-spacing: 0.03em;
+	margin-top: 25px;
+	-webkit-font-smoothing: antialiased;
 }
+
 .top-navigation .links li {
-    display: inline-block;
-    margin-left: 25px;
+	display:inline-block;
+	margin-left: 25px;
 }
+
+.top-navigation .links li:hover {
+	color:#333333;
+	cursor:pointer;
+}
+
 .top-navigation .links .active {
     color: #4c5058;
     font-weight: 500;
 }
-.top-navigation .links li:hover {
-    cursor: pointer;
-    color: #333333;
-}
 
-/* Navigation Section */
-.top-navigation {
-    background-color: #fff;
-}
-.top-navigation > .content {
-    width: 970px;
-    height: 70px;
-    margin: 0 auto;
-}
-
-.introduction {
-    background-image: url('../images/first-background.jpg');
+/*Header Section*/
+.photo-section {
+	background-image: url('../images/first-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
     background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 45.938rem;
+	height:643px;
+	overflow: auto;
+	text-align: center;
+	color:#fff;
+	padding: 150px 0;
+}
+
+.photo-section h1 {
+	font-size: 50px;
+	margin-top: 60px;
+	font-weight: 300;
+}
+
+.photo-section h3 {
+	font-size: 25px;
+	margin-top: 20px;
+	font-weight: 300;
 }
 
 .big-button {
@@ -91,5 +140,82 @@ ol, ul {
     border-radius: 4px;
     padding: 16px 26px;
     line-height: 1.33;
+    width: 156px;
+	font-size: 18px;
+    color:#fff;
+    background-color:#f15a29;
+    margin:0 auto;
+	margin-top: 25px;
 }
 
+.big-button:hover {
+	background-color:#d9400e;
+	cursor:pointer;
+}
+
+.column {
+	width: 33.33333%;
+	display: inline-block;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    height: 220px;
+}
+
+
+.icon-section h2 {
+	font-size: 40px;
+	margin-top: 60px;
+	font-weight: 350;
+	margin-bottom: 25px;
+}
+
+.icon-section h3 {
+	font-size: 25px;
+	font-weight: 350;
+	margin-top: 20px;
+}
+
+.icon-section {
+	color: #000000;
+	text-align: center;
+}
+
+/*Footer Section*/
+.footer {
+	text-align: center;
+}
+
+.copyright {
+	color: #545454;
+}
+
+.footer h4 {
+	margin: 15px 0;
+}
+
+.footer .icons li {
+	display:inline-block;
+	margin-left: 10px;
+	border-radius: 20px;
+	border: 1px solid #545454;
+	text-align: center;
+	width:30px;
+	height:30px;
+	padding: 5px 0;
+}
+
+.footer .icons li:hover {
+	cursor:pointer;
+}
+
+.twitter {
+	color:#4099FF;
+}
+
+.facebook {
+	color:#3b5998;
+}
+
+.instagram {
+	color:#3b5998;
+}
